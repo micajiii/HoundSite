@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hound.com</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Roboto Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
             background-color: rgb(40, 40, 40);
             color: white;
-            text-shadow: 1px 0 10px rgb(51, 51, 51);
+            text-shadow: 1px 0 10px rgb(255, 255, 255, 0.1);
         }
 
         @keyframes superman-fly-right {
@@ -29,7 +31,7 @@
 
         .about-us {
             padding: 3em;
-            box-shadow: 0.5px 0.5px 50px rgba(54, 54, 54, 0.5);
+            box-shadow: 0.5px 0.5px 50px rgba(88, 0, 81, 0.5);
             border-radius: 5px;
             margin: auto;
             margin-top: 100px;
@@ -37,6 +39,68 @@
             justify-content: space-around;
             animation: superman-fly-right ease-out 1s none;
             background-color: rgb(52, 52, 52);
+            transition: transform 1s ease-in-out;
+        }
+
+        img {
+            animation: superman-fly-right ease-out 1s none;
+        }
+
+        .floatingleft {
+            float: left;
+        }
+
+        .floatingright {
+            float: right;
+        }
+
+        .about-us:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 2em;
+            box-shadow: 0.5px 0.5px 50px rgba(88, 0, 81, 0.5);
+            border-radius: 5px;
+            margin: 0 auto;
+            color: white;
+            width: 300px;
+            font-family: 'Roboto Mono';
+            border-style: none;
+            /* justify-content: space-around; */
+            animation: superman-fly-right ease-out 1s none;
+            background-color: rgb(43, 43, 43);
+            transition: all 1s ease;
+        }
+
+        button:hover,
+        a:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 50%
+            }
+        }
+
+        .type {
+            overflow: hidden;
+            border-right: .15em solid rgb(60, 60, 60);
+            white-space: nowrap;
+            font-size: 1.6rem;
+            width: 0;
+            animation: typing 5s forwards;
         }
 
         /* .bottom-bar {
@@ -56,7 +120,7 @@
 
 <body>
     <div class="about-us">
-        <h2>About The Hounds</h2>
+        <h2 class="type">About The Hounds</h2>
         <p>Welcome to the hound website!
             <br><br>
             You probably came here from the youtube channel, but don't worry,
@@ -64,13 +128,21 @@
         </p>
         <h3>We Provide:</h3>
         <ul>
-            <li>high quality leaks</li>
-            <li>a cookie logger for Roblox</li>
+            <li>High quality leaks</li>
+            <li>A Cookie Logger for Roblox</li>
         </ul>
         <p>This website is actively being worked on and if you need any more help go to the discord and make a ticket
             and our support team will help you to fix any issues you might be having.
         </p>
+        <br>
+        <div style="margin: 0 auto;" align="center">
+            <a href="https://discord.gg/sPQgTXCZ8J">
+                <button>Click to join the Discord!
+                </button>
+            </a>
+        </div>
     </div>
+    <br>
     <br>
 </body>
 
